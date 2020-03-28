@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+
+		<script>
+			/* Configuration */
+			var SPREADSHEET_ID = '1Zrx6tpPhVOXg7XULPujhQ0F6btOwiMUn_NM6zGPDuSk';
+			var REGISTER_FORM_URL = 'https://forms.gle/KszqcmTJbknnY7ZS8';
+			var GOOGLE_ANALYTICS_ID = 'UA-162120805-1';
+			var FULL_STORY_ORG = 'T1RMR';
+			var FULL_STORY_NAMESPACE = 'FS';
+		</script>
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162120805-1"></script>
+
+		<script src="./script.js"></script>
+
+		<title>Tight-knit Vancouver</title>
+
+		<!-- <meta property="og:image" content="./assets/bailoutlogo.png" /> -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://tight-knit.ca" />
+		<meta property="og:title" content="Tight-knit Vancouver" />
+		<meta property="og:description" content="Tight-knit Vancouver is committed to helping Vancouver's community connect with and support its small and independent business." />
+
+		<link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="icon"
+			href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/237/heavy-black-heart_2764.png"
+		/>
+
+		<link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css" />
+
+		<link rel="stylesheet" href="./style.css" />
+
+	</head>
+
+	<body onload="onBodyLoad();">
+		<a name="home"></a>
+
+		<div class="nav nav-top center mw7">
+			<a
+				href="#home"
+				onClick="sendGAEvent('send', 'event', 'Header Links', 'Clicked home', 'From top', '0')"
+			>
+				Home
+			</a>
+
+			<a
+				href="#businesses"
+				onClick="sendGAEvent('send', 'event', 'Header Links', 'Clicked businesses', 'From top', '0')"
+			>
+				Businesses
+			</a>
+
+			<a
+				href="#about-us"
+				onClick="sendGAEvent('send', 'event', 'Header Links', 'Clicked about us', 'From top', '0')"
+			>
+				About Us
+			</a>
+		</div>
+
+		<div class="mw7 ph4 center">
+			<div style="border-bottom: 1px #6696CC solid; padding: 10px; padding-bottom: 26px;">
+				<div style="font-size: 30px; margin-top: 40px; font-weight: bold">Keep Vancouver tight-knit ❤️</div>
+			</div>
+
+			<div class="fl w-100 pa2">
+				<h1 style="font-size: 36px;">
+					Support Local Businesses
+				</h1>
+				<h1 class="f4 measure">
+					Many small and independent local businesses are facing financial hardship due to COVID-19.
+				</h1>
+			</div>
+
+			<div class="fl w-100 pa2">
+				<div class="bg-white br1 pa3" style="border-radius: 4px;">
+					<h3 class="f4 measure-narrow mt0">
+						It's Time to Come Together
+					</h3>
+
+					As a citizen of Vancouver it is our responsibility to support our local small and independent
+					businesses and help them weather the storm of COVID-19. This site is intended to be a resource
+					for finding and connecting with these businesses in our local community and learning ways
+					that we can provide ongoing patronage to help them get through this tough time.
+
+					<br>
+					<br>
+
+					Supporting Vancouver businesses helps support jobs for people like you and I. As a tight-knit
+					community we can come together in a variety of ways that can sustain local jobs and businesses.
+
+					<br>
+					<br>
+
+					<div id="tell_me_more_header">
+						<a
+							href=""
+							onClick="showTellMeMore(); sendGAEvent('send', 'event', 'Tell me more', 'Clicked tell me more', '0', '0'); return false;"
+						>
+							Tell me more...
+						</a>
+					</div>
+
+					<div id="tell_me_more" style="display: none;">
+						<p>
+							In order to slow the spread of the Coronavirus, the local government is advising
+							restaurants, bars, cafes, nightclubs, movie theaters, small theater houses, and concert
+							venues to close.
+						</p>
+						<p>
+							While this is prudent from a public health perspective, these closures will have a real
+							and immediate economic impact to small and independent businesses across many industries.
+							It could mean having to close temporarily, lay off staff or even close for good.
+						</p>
+						<p>
+							The economic impacts of the Coronavirus will be comparable to a very severe recession.
+							We are already seeing local businesses shutter completely as they know they don't have the
+							financial backing to survive this pandemic.
+						</p>
+					</div>
+
+					<br>
+				</div>
+
+				<div
+					class="bg-white br1 pa3"
+					style="border-radius: 4px; margin-top: 20px; margin-bottom: 15px;"
+				>
+					<h3 class="f4 measure-narrow mt0">
+						Add a Business
+					</h3>
+
+					Tell your favorite local businesses to register on tight-knit.ca so we can all support them and support Vancouver.
+
+					<br><br>
+
+					If you own or operate a business affected by COVID-19,
+					<a
+						id="register_business_link"
+						style="font-weight: 900;"
+						target="_blank"
+						href=""
+						onClick="sendGAEvent('send', 'event', 'Businesses', 'Clicked form link', '0', '0')"
+					>
+						fill out this form
+					</a>
+					to register your business listing.
+
+					<script>
+						document.getElementById('register_business_link').href = REGISTER_FORM_URL;
+					</script>
+				</div>
+			</div>
+
+			<div class="fl w-100 pt10 pa2">
+				<a name="businesses"></a>
+
+				<div id="business_flex">
+					<div id="search_icon" class="flex_item">
+						<i class="material-icons">search</i>
+					</div>
+
+					<input
+						autocomplete="off"
+						id="search"
+						class="flex_item"
+						type="text"
+						placeholder="Search businesses..."
+						onkeyup="searchFilter();"
+					>
+				</div>
+
+				<div id="sheet" style="margin-bottom: 15px;"></div>
+			</div>
+
+			<div style="text-align: center;">
+				<a name="about-us" style="font-size: 16px; color: inherit;">About Us</a>
+
+				<div style="font-size: 12px; margin-top: 12px; margin-bottom: 25px; margin-left: 10px; margin-right: 10px; text-align: center;">
+					<div style="max-width: 410px; margin: 0 auto;">
+						Made with ❤️ in Vancouver by
+						<a
+							href="https://derekoconnell.com.au"
+							target="_blank"
+							onClick="sendGAEvent('send', 'event', 'Footer Links', 'Clicked Derek', 'From bottom', '0')"
+						>
+							Derek O&#39;Connell
+						</a>
+
+						<br><br>
+
+						Based on the excellent project:
+						<a
+							href="https://bailout.nyc"
+							target="_blank"
+							onClick="sendGAEvent('send', 'event', 'Footer Links', 'Clicked bailout.nyc', 'From bottom', '0')"
+						>
+							bailout.nyc
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="nav nav-bottom center mw7">
+				<a
+					href="#home"
+					onClick="sendGAEvent('send', 'event', 'Footer Links', 'Clicked home', 'From bottom', '0')"
+				>
+					Home
+				</a>
+
+				<a
+					href="#businesses"
+					onClick="sendGAEvent('send', 'event', 'Footer Links', 'Clicked businesses', 'From bottom', '0')"
+				>
+					Businesses
+				</a>
+
+				<a
+					href="#about-us"
+					onClick="sendGAEvent('send', 'event', 'Footer Links', 'Clicked about us', 'From bottom', '0')"
+				>
+					About Us
+				</a>
+			</div>
+		</div>
+
+		<script
+			type="text/javascript"
+			src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"
+		></script>
+	</body>
+</html>
